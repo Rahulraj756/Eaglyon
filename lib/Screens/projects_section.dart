@@ -220,7 +220,7 @@ class ProjectsSection extends StatelessWidget {
       padding: const EdgeInsets.all(20),
       decoration: BoxDecoration(
         color: const Color(0xFF111827),
-        borderRadius: BorderRadius.circular(16),
+        borderRadius: BorderRadius.circular(8),
         border: Border.all(
           color: isNewest
               ? const Color(0xFFF59E0B).withValues(alpha: 0.7)
@@ -233,16 +233,16 @@ class ProjectsSection extends StatelessWidget {
         children: [
           // Sample Image / Preview Box
           Container(
-            height: 115,
+            height: 150,
             width: double.infinity,
             decoration: BoxDecoration(
               color: const Color(0xFF0B0F19),
-              borderRadius: BorderRadius.circular(10),
+              borderRadius: BorderRadius.circular(6),
               border: Border.all(color: Colors.white10),
             ),
             child: item.sampleImageBytes != null
                 ? ClipRRect(
-                    borderRadius: BorderRadius.circular(10),
+                    borderRadius: BorderRadius.circular(6),
                     child: Image.memory(
                       item.sampleImageBytes!,
                       fit: BoxFit.cover,

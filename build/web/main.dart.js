@@ -89120,13 +89120,13 @@ for(l=0;l<r;++l){q=l<h.length-1?22:0
 m[l]=new A.jm(1,B.cR,new A.cb(new A.a5(0,0,q,0),this.Nl(a,h[l],l===0),k),k)}o.push(A.bm(m,B.t,B.m,B.j,0,k))}else{m=J.LK(r,q)
 for(l=0;l<r;++l){q=l<h.length-1?18:0
 m[l]=new A.cb(new A.a5(0,0,0,q),this.Nl(a,h[l],l===0),k)}o.push(A.aR(m,B.x,B.m,B.j))}}return A.aJ(A.aR(o,B.t,B.m,B.j),B.n,B.Y,k,k,k,k,k,new A.a5(i,s,i,s),1/0)},
-Nl(a,b,c){var s,r,q,p,o=null,n=A.ab(16),m=c?B.o.cu(0.7):B.ab
+Nl(a,b,c){var s,r,q,p,o=null,n=A.ab(8),m=c?B.o.cu(0.7):B.ab
 m=A.bM(m,c?1.4:1)
-s=A.ab(10)
+s=A.ab(6)
 r=A.bM(B.ab,1)
 q=b.w
-q=q!=null?A.kk(A.ab(10),A.p0(q,B.eO,o,o),B.b6):B.EQ
-s=A.aJ(q,B.n,o,o,new A.aG(B.Y,o,r,s,o,o,B.w),115,o,o,o,1/0)
+q=q!=null?A.kk(A.ab(6),A.p0(q,B.eO,o,o),B.b6):B.EQ
+s=A.aJ(q,B.n,o,o,new A.aG(B.Y,o,r,s,o,o,B.w),150,o,o,o,1/0)
 r=B.o.cu(0.14)
 q=A.ab(6)
 q=A.aJ(A.aa(b.c,o,o,o,B.my,o,o),B.n,o,o,new A.aG(r,o,o,q,o,o,B.w),o,o,o,B.dZ,o)
@@ -89441,7 +89441,7 @@ pr(a,b,c){var s=null,r=A.ab(16),q=A.bM(B.ab,1),p=B.o.cu(0.12),o=A.ab(12)
 return A.aJ(A.aR(A.b([A.aJ(A.mr(b,B.o,s,24),B.n,s,s,new A.aG(p,s,s,o,s,s,B.w),s,s,s,B.H9,s),B.et,A.aa(c,s,s,s,B.bv,s,s),B.c0,A.aa(a,s,s,s,B.Bi,s,s)],t.p),B.t,B.m,B.j),B.n,s,s,new A.aG(B.ai,s,q,r,s,s,B.w),s,s,s,B.bh,1/0)}}
 A.Mp.prototype={
 K(a){var s=null
-return new A.zM(B.HU,"My Portfolio",A.uR(s,s,B.lA,B.FT,s),!1,s)}}
+return new A.zM(B.HU,"Eaglyon",A.uR(s,s,B.lA,B.FT,s),!1,s)}}
 A.Mt.prototype={
 gBc(){return B.Sp},
 K(a){var s=this,r=null,q=A.b9(a,r,t.w).w.a.a>900,p=q?80:20,o=t.p,n=A.b([A.bm(A.b([A.aJ(B.EK,B.n,r,r,B.CP,40,r,r,B.ks,40),B.Sv,A.aa($.BW,r,r,r,B.We,r,r)],o),B.x,B.m,B.j,0,r)],o)

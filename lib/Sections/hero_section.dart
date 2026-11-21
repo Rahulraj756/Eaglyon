@@ -1,6 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:my_practice_app/Data_Model/site_data.dart';
 import 'package:my_practice_app/Screens/projects_grid_screen.dart';
+import 'package:my_practice_app/Themes_Data/themes_colors.dart';
 
 class HeroSection extends StatelessWidget {
   final VoidCallback? onExploreWorks;
@@ -14,7 +15,7 @@ class HeroSection extends StatelessWidget {
     return Container(
       width: double.infinity,
       constraints: BoxConstraints(minHeight: screenHeight - 80),
-      decoration: const BoxDecoration(color: Color(0xFF0B0F19)),
+      decoration: const BoxDecoration(color: AppColors.backgroundDark),
       padding: EdgeInsets.symmetric(
         horizontal: isDesktop ? 80.0 : 24.0,
         vertical: 40.0,
