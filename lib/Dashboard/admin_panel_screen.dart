@@ -317,7 +317,7 @@ class _AdminPanelScreenState extends State<AdminPanelScreen> {
       final newLogo = _logoController.text.trim().isEmpty
           ? 'PORTFOLIO'
           : _logoController.text.trim();
-      await SiteData.saveData(newLogo);
+      await SiteData.saveData(newLogo, imageBytes: _imageBytes);
     } else if (_selectedMenuIndex == 1) {
       await SiteData.saveHeroData(
         badge: _heroBadgeController.text.trim().isEmpty
@@ -786,7 +786,7 @@ class _AdminPanelScreenState extends State<AdminPanelScreen> {
       default:
         return AdminNavbarTab(
           logoController: _logoController,
-          imageBytes: _imageBytes,
+          logoImageBytes: _imageBytes,
           imageName: _droppedImageName,
           isDragging: _isDragging,
           onDragStateChanged: (val) => setState(() => _isDragging = val),

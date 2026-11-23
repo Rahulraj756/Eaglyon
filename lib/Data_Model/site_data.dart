@@ -68,6 +68,7 @@ class ProjectItem {
 class SiteData {
   // Navbar Data
   static String logoText = 'PORTFOLIO';
+  static Uint8List? logoImageBytes;
 
   // Hero Section Data
   static String heroBadge = 'SHARP & FOCUSED';
@@ -207,10 +208,16 @@ class SiteData {
       'Precision spreadsheets, automated workflows, and clean digital interfaces.';
   static String footerCopyright = '© 2026 All rights reserved.';
 
+  static get logoImage => null;
+
   static Future<void> loadData() async {
     final prefs = await SharedPreferences.getInstance();
 
     logoText = prefs.getString('saved_logo_text') ?? logoText;
+    final logoImageBase64 = prefs.getString('saved_logo_image');
+    if (logoImageBase64 != null && logoImageBase64.isNotEmpty) {
+      logoImageBytes = base64Decode(logoImageBase64);
+    }
 
     heroBadge = prefs.getString('saved_hero_badge') ?? heroBadge;
     heroTitleWhite =
@@ -337,10 +344,17 @@ class SiteData {
         prefs.getString('saved_footer_copyright') ?? footerCopyright;
   }
 
-  static Future<void> saveData(String newLogo) async {
+  static Future<void> saveData(String newLogo, {Uint8List? imageBytes}) async {
     final prefs = await SharedPreferences.getInstance();
     logoText = newLogo;
     await prefs.setString('saved_logo_text', newLogo);
+
+    logoImageBytes = imageBytes;
+    if (imageBytes != null) {
+      await prefs.setString('saved_logo_image', base64Encode(imageBytes));
+    } else {
+      await prefs.remove('saved_logo_image');
+    }
   }
 
   static Future<void> saveHeroData({

@@ -30,27 +30,26 @@ class NavbarSection extends StatelessWidget implements PreferredSizeWidget {
           // 1. LEFT: Logo
           Row(
             children: [
-              Container(
-                width: 40,
-                height: 40,
-                padding: const EdgeInsets.all(8),
-                decoration: const BoxDecoration(shape: BoxShape.circle),
-                child: const Center(
-                  child: Icon(
-                    Icons.pets,
-                    size: 20,
-                    color: AppColors.primaryGold,
-                  ),
-                ),
-              ),
-              const SizedBox(width: 5),
-              Text(
-                SiteData.logoText,
-                style: const TextStyle(
-                  color: AppColors.primaryGold,
-                  fontSize: 22,
-                  fontWeight: FontWeight.bold,
-                  letterSpacing: 1.6,
+              SizedBox(
+                height: 60,
+                child: Align(
+                  alignment: Alignment.centerLeft,
+                  child: SiteData.logoImageBytes != null
+                      ? Image.memory(
+                          SiteData.logoImageBytes!,
+                          height: 60,
+                          fit: BoxFit.contain,
+                        )
+                      : Text(
+                          SiteData.logoText,
+                          style: const TextStyle(
+                            // apna purana TextStyle yahan rakhein
+                            fontSize: 22,
+                            fontWeight: FontWeight.bold,
+                            letterSpacing: 1.6,
+                            color: AppColors.primaryGold,
+                          ),
+                        ),
                 ),
               ),
             ],

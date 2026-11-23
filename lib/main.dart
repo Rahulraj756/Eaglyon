@@ -1,6 +1,9 @@
 import 'package:flutter/material.dart';
+import 'package:my_practice_app/Dashboard/admin_panel_screen.dart';
 import 'package:my_practice_app/Data_Model/site_data.dart';
 import 'package:my_practice_app/Screens/home_screen.dart';
+import 'package:my_practice_app/Screens/plan_customizer_screen.dart';
+import 'package:my_practice_app/Screens/projects_grid_screen.dart';
 
 void main() async {
   WidgetsFlutterBinding.ensureInitialized();
@@ -18,6 +21,17 @@ class MyApp extends StatelessWidget {
   Widget build(BuildContext context) {
     return MaterialApp(
       title: 'Eaglyon',
+      initialRoute: '/',
+      routes: {
+        '/': (context) => const HomeScreen(),
+        '/projects': (context) => const ProjectsGridScreen(),
+        '/customizer': (context) => const PlanCustomizerScreen(
+          planName: '',
+          initialPriceText: '',
+          billingType: '',
+        ),
+        '/admin': (context) => const AdminPanelScreen(),
+      },
       debugShowCheckedModeBanner: false,
       theme: ThemeData(
         primarySwatch: Colors.blue,

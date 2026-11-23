@@ -5,7 +5,7 @@ import 'package:flutter/material.dart';
 
 class AdminNavbarTab extends StatelessWidget {
   final TextEditingController logoController;
-  final Uint8List? imageBytes;
+  final Uint8List? logoImageBytes;
   final String? imageName;
   final bool isDragging;
   final ValueChanged<bool> onDragStateChanged;
@@ -15,7 +15,7 @@ class AdminNavbarTab extends StatelessWidget {
   const AdminNavbarTab({
     super.key,
     required this.logoController,
-    required this.imageBytes,
+    required this.logoImageBytes,
     required this.imageName,
     required this.isDragging,
     required this.onDragStateChanged,
@@ -111,13 +111,13 @@ class AdminNavbarTab extends StatelessWidget {
                   width: 1.5,
                 ),
               ),
-              child: imageBytes != null
+              child: logoImageBytes != null
                   ? ClipRRect(
                       borderRadius: BorderRadius.circular(10),
                       child: Stack(
                         fit: StackFit.expand,
                         children: [
-                          Image.memory(imageBytes!, fit: BoxFit.contain),
+                          Image.memory(logoImageBytes!, fit: BoxFit.contain),
                           Positioned(
                             top: 8,
                             right: 8,
