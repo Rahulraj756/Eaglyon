@@ -91,11 +91,9 @@ class ProjectsSection extends StatelessWidget {
                         ),
                       ),
                       onPressed: () {
-                        Navigator.push(
-                          context,
-                          MaterialPageRoute(
-                            builder: (context) => const ProjectsGridScreen(),
-                          ),
+                        Navigator.pushNamed(context, '/project');
+                        MaterialPageRoute(
+                          builder: (context) => const ProjectsGridScreen(),
                         );
                       },
                       icon: const Icon(Icons.grid_view_rounded, size: 16),
@@ -146,11 +144,9 @@ class ProjectsSection extends StatelessWidget {
                         ),
                       ),
                       onPressed: () {
-                        Navigator.push(
-                          context,
-                          MaterialPageRoute(
-                            builder: (context) => const ProjectsGridScreen(),
-                          ),
+                        Navigator.pushNamed(context, '/project');
+                        MaterialPageRoute(
+                          builder: (context) => const ProjectsGridScreen(),
                         );
                       },
                       icon: const Icon(Icons.grid_view_rounded, size: 16),
@@ -341,11 +337,9 @@ class ProjectsSection extends StatelessWidget {
                 ),
               ),
               onPressed: () {
-                Navigator.push(
-                  context,
-                  MaterialPageRoute(
-                    builder: (context) => ProjectDetailScreen(project: item),
-                  ),
+                Navigator.pushNamed(context, '/project');
+                MaterialPageRoute(
+                  builder: (context) => ProjectDetailScreen(project: item),
                 );
               },
               child: const Text(

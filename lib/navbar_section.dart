@@ -203,7 +203,7 @@ class MobileEndDrawer extends StatelessWidget {
                 ),
                 IconButton(
                   icon: const Icon(Icons.close, color: AppColors.textWhite),
-                  onPressed: () => Navigator.pop(context),
+                  onPressed: () => Navigator.pushNamed(context, '/admin'),
                 ),
               ],
             ),
@@ -286,7 +286,7 @@ class MobileEndDrawer extends StatelessWidget {
         style: const TextStyle(color: AppColors.textWhite, fontSize: 16),
       ),
       onTap: () {
-        Navigator.pop(context);
+        Navigator.pushNamed(context, '/admin');
         onTap();
       },
     );

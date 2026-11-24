@@ -21,6 +21,7 @@ class MyApp extends StatelessWidget {
   Widget build(BuildContext context) {
     return MaterialApp(
       title: 'Eaglyon',
+      debugShowCheckedModeBanner: false,
       initialRoute: '/',
       routes: {
         '/': (context) => const HomeScreen(),
@@ -32,12 +33,10 @@ class MyApp extends StatelessWidget {
         ),
         '/admin': (context) => const AdminPanelScreen(),
       },
-      debugShowCheckedModeBanner: false,
       theme: ThemeData(
         primarySwatch: Colors.blue,
         scaffoldBackgroundColor: const Color(0xFFF1F5F9),
       ),
-      home: const HomeScreen(),
     );
   }
 }
